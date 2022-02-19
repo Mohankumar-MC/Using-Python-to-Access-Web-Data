@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://www.py4e.com/tools/python-data/index.php?PHPSESSID=b61b9743659578809c137253b7c2dce9 -->
+<html lang="en" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PY4E - Python for Everybody</title>
+<script>
+ var _TSUGI = {
+            context_title: "Using Python to Access Web Data",
+            link_title: "Assignment: Following Links in HTML Using BeautifulSoup",
+            user_displayname: "Mohankumar Markuli Chandrayigowda",
+            ajax_session: "PHPSESSID=b61b9743659578809c137253b7c2dce9",
+heartbeat: 1500000,
+heartbeat_url: "https://www.py4e.com/tsugi/util/heartbeat?msec=1500000&PHPSESSID=b61b9743659578809c137253b7c2dce9",
+rest_path: {"parent":"\/tools\/python-data","base_url":"https:\/\/www.py4e.com","controller":"index.php","extra":"","action":false,"parameters":[],"current":"\/tools\/python-data\/index.php","full":"\/tools\/python-data\/index.php"},
+spinnerUrl: "https://static.tsugi.org/img/spinner.gif",
+staticroot: "https://static.tsugi.org",
+apphome: "https://www.py4e.com",
+wwwroot: "https://www.py4e.com/tsugi",
+websocket_url: false,
+websocket_token: false,
+react_token: "b61b9743659578809c137253b7c2dce9",
+window_close_message: "Application complete",
+session_expire_message: "Your session has expired"
+
+}
+</script>
+        <!-- Tiny bit of JS -->
+        <script src="./PY4E - Python for Everybody E2_files/tsugiscripts_head.js.download"></script>
+        <!-- Le styles -->
+        <link href="./PY4E - Python for Everybody E2_files/bootstrap.min.css" rel="stylesheet">
+        <link href="./PY4E - Python for Everybody E2_files/jquery-ui.min.css" rel="stylesheet">
+                <link href="./PY4E - Python for Everybody E2_files/all.css" rel="stylesheet">
+        <link href="./PY4E - Python for Everybody E2_files/v4-shims.css" rel="stylesheet">
+        <style>:root {--primary:#0D47A1;
+--primary-menu:#0D47A1;
+--primary-border:#0d4295;
+--primary-darker:#0c4091;
+--primary-darkest:#0b3b85;
+--background-color:#FFFFFF;
+--secondary:#EEEEEE;
+--secondary-menu:#EEEEEE;
+--text:#111111;
+--text-light:#5E5E5E;
+--font-family:sans-serif;
+--font-size:14px;
+}</style>
+          <link href="./PY4E - Python for Everybody E2_files/tsugi2.css" rel="stylesheet">
+
+          <style>
+                        </style>
+<style>
+a[target="_blank"]:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    content: " \f35d";
+}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+body {
+    top: 0px !important;
+    }
+</style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/html5shiv/html5shiv.js"></script>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/respond/respond.min.js"></script>
+        <![endif]-->
+
+    <script type="text/javascript">CSRF_TOKEN = "620d13115a432";</script>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./PY4E - Python for Everybody E2_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./PY4E - Python for Everybody E2_files/m=el_main"></script></head>
+<body prefix="oer: http://oerschema.org" style="padding-top: 5.93rem; position: relative; min-height: 100%; top: 0px;" data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="">
+<div id="body_container" class="container">
+<script>
+if (window!=window.top) {
+    document.getElementById("body_container").className = "container-fluid";
+} else {
+    document.getElementById("body_container").className = "container";
+}
+</script>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="tsugi_main_nav_bar" style="display: block;">  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:window_close();">Done</a>
+    </div>
+    <div class="navbar-collapse collapse">
+    </div> <!--/.nav-collapse -->
+  </div> <!--container -->
+</nav>
+<script>
+if ( ! inIframe() ) {
+  document.getElementById('tsugi_main_nav_bar').style.display = 'block';
+  document.getElementsByTagName('body')[0].style.paddingTop = '5.93rem';
+} else {
+  document.getElementsByTagName('body')[0].style.paddingTop = '1.0rem';
+}
+</script>
+<!-- Modal -->
+<div id="tsugi_settings_dialog" class="modal fade" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="fa fa-close" aria-hidden="true"></span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Assignment: Following Links in HTML Using BeautifulSoup Settings</h4>
+      </div>
+      <div class="modal-body">
+                  <img id="tsugi_settings_spinner" src="./PY4E - Python for Everybody E2_files/spinner.gif" style="display: none">
+            <span id="tsugi_settings_save_fail" class="text-danger" style="display:none;">Unable to save settings</span>
+            <p>Exercise is set to Follow links in a series of web pages.</p><p>There is currently no due date/time for this assignment.</p>
+              </div>
+    </div>
+
+  </div>
+</div>
+<p>Welcome Mohankumar Markuli Chandrayigowda from Using Python to Access Web Data</p>
+<div id="flashmessages"><div class="alert alert-danger alert-banner" style="clear:both">
+                    <a href="https://www.py4e.com/tools/python-data/index.php?PHPSESSID=b61b9743659578809c137253b7c2dce9#" class="close" data-dismiss="alert">×</a>Your name did not match</div>
+</div><p>
+<b>Following Links in Python</b>
+</p><p>
+In this assignment you will write a Python program that expands on
+<a href="https://www.py4e.com/code3/urllinks.py?PHPSESSID=b61b9743659578809c137253b7c2dce9" target="_blank">http://www.py4e.com/code3/urllinks.py</a>.
+The program will use <b>urllib</b> to read the HTML from the data files below,
+extract the href= vaues from the anchor tags, scan for a tag that is in
+a particular position relative to the first name in the list,
+follow that link and repeat the process
+a number of times and report the last name you find.
+</p>
+<p>
+We provide two files for this assignment.  One is a sample file where we give
+you the name for your testing and the other is the actual data you need
+to process for the assignment
+</p><ul>
+<li> Sample problem: Start at
+<a href="http://py4e-data.dr-chuck.net/known_by_Fikret.html" target="_blank">http://py4e-data.dr-chuck.net/known_by_Fikret.html</a> <br>
+Find the link at position <b>3</b> (the first name is 1).
+Follow that link.  Repeat this process <b>4</b> times.  The
+answer is the last name that you retrieve.<br>
+Sequence of names:
+Fikret Montgomery Mhairade Butchi Anayah <br>
+Last name in sequence: Anayah<br>
+</li>
+<li> Actual problem: Start at: <a href="http://py4e-data.dr-chuck.net/known_by_Hussnain.html" target="_blank">http://py4e-data.dr-chuck.net/known_by_Hussnain.html</a> <br>
+Find the link at position <b>18</b> (the first name is 1).
+Follow that link.  Repeat this process <b>7</b> times.  The
+answer is the last name that you retrieve.<br>
+Hint: The first character of the name of the last page
+that you will load is: N<br>
+</li>
+</ul>
+<b>Strategy</b>
+<p>
+The web pages tweak the height between the links and hide the page after a few seconds
+to make it difficult for you to do the assignment without writing a Python program.
+But frankly with a little effort and patience you can overcome these attempts to make it
+a little harder to complete the assignment without writing a Python program.
+But that is not the point.   The point is to write a clever Python program to solve the
+program.
+</p>
+<p><b>Sample execution</b>
+</p><p>
+Here is a sample execution of a solution:
+</p><pre>$ python3 solution.py
+Enter URL: http://py4e-data.dr-chuck.net/known_by_Fikret.html
+Enter count: 4
+Enter position: 3
+Retrieving: http://py4e-data.dr-chuck.net/known_by_Fikret.html
+Retrieving: http://py4e-data.dr-chuck.net/known_by_Montgomery.html
+Retrieving: http://py4e-data.dr-chuck.net/known_by_Mhairade.html
+Retrieving: http://py4e-data.dr-chuck.net/known_by_Butchi.html
+Retrieving: http://py4e-data.dr-chuck.net/known_by_Anayah.html
+</pre>
+The answer to the assignment for this execution is "Anayah".
+<p></p>
+<p><b>Turning in the Assignment</b>
+</p><form method="post"><input type="hidden" name="PHPSESSID" value="b61b9743659578809c137253b7c2dce9">
+Enter the last name retrieved and your Python code below:<br>
+Name: <input type="text" size="20" name="name">
+(name starts with N)
+<input type="submit" value="Submit Assignment"><br>
+Python code:<br>
+<textarea rows="20" style="width: 90%" name="code"></textarea><br>
+</form>
+<script src="./PY4E - Python for Everybody E2_files/jquery-1.11.3.js.download"></script>
+<script src="./PY4E - Python for Everybody E2_files/bootstrap.min.js.download"></script>
+<script src="./PY4E - Python for Everybody E2_files/jquery-ui.min.js.download"></script>
+<script src="./PY4E - Python for Everybody E2_files/jquery.timeago-1.6.3.js.download"></script>
+<script src="./PY4E - Python for Everybody E2_files/handlebars-v4.0.2.js.download"></script>
+<script src="./PY4E - Python for Everybody E2_files/tmpl.min.js.download"></script>
+<script src="./PY4E - Python for Everybody E2_files/tsugiscripts.js.download"></script>
+<script type="text/javascript">
+    HEARTBEAT_TIMEOUT = setTimeout(doHeartBeat, _TSUGI.heartbeat);
+    tsugiEmbedMenu();
+    $(document).ready(function() { jQuery("time.timeago").timeago(); });
+</script>
+<div id="google_translate_element" style="position: fixed; right: 1em; bottom: 0.25em;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="./PY4E - Python for Everybody E2_files/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="goog-te-menu-value" href="javascript:void(0)"><span>Select Language</span><img src="./PY4E - Python for Everybody E2_files/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="./PY4E - Python for Everybody E2_files/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, "google_translate_element");
+}
+</script><script type="text/javascript" src="./PY4E - Python for Everybody E2_files/element.js.download"></script>
+<script>
+$('a').each(function (x) {
+    var href = $(this).attr('href');
+    if ( ! href ) return;
+    if ( ! href.startsWith('#') ) return;
+    var pos = href.indexOf('/?');
+    if ( pos < 1 ) return;
+    // console.dir('Patching broken # href='+href);
+    href = href.substring(0,pos);
+    $(this).attr('href', href);
+});
+$('a').each(function (x) {
+    var href = $(this).attr('href');
+    var sess_name = 'PHPSESSID';
+    var sess_id = 'b61b9743659578809c137253b7c2dce9';
+    if ( ! href ) return;
+    if ( href.startsWith('#') ) return;
+    if ( href.indexOf(sess_name) > 0 ) return;
+    if ( href.startsWith('javascript:') ) return;
+
+    var localurl = true;
+    if ( href.startsWith('http://') ) localurl = false;
+    if ( href.startsWith('https://') ) localurl = false;
+    if ( href.startsWith('//') ) localurl = false;
+
+    if ( href.startsWith(_TSUGI.wwwroot) ) localurl = true;
+    if ( _TSUGI.apphome && href.startsWith(_TSUGI.apphome) ) localurl = true;
+
+    // console.log(href,localurl);
+ 
+    if ( ! localurl ) return;
+    if ( href.indexOf('?') > 0 ) {
+        href = href + '&';
+    } else {
+        href = href + '?';
+    }
+    href = href + sess_name + '=' + sess_id;
+    // console.dir('Patching missing session href='+href);
+    $(this).attr('href', href);
+});
+
+</script>
+
+</div><script src="./PY4E - Python for Everybody E2_files/webcomponents-lite.js.download"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./PY4E - Python for Everybody E2_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 1045px; height: 267px; display: none;" src="./PY4E - Python for Everybody E2_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

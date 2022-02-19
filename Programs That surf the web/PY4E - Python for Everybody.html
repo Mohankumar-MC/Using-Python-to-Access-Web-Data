@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://www.py4e.com/tools/python-data/?PHPSESSID=974a2341ae31ca044c133da4331599d1 -->
+<html lang="en" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PY4E - Python for Everybody</title>
+<script>
+ var _TSUGI = {
+            context_title: "Using Python to Access Web Data",
+            link_title: "Scraping HTML Data with BeautifulSoup",
+            user_displayname: "Mohankumar Markuli Chandrayigowda",
+            ajax_session: "PHPSESSID=974a2341ae31ca044c133da4331599d1",
+heartbeat: 1500000,
+heartbeat_url: "https://www.py4e.com/tsugi/util/heartbeat?msec=1500000&PHPSESSID=974a2341ae31ca044c133da4331599d1",
+rest_path: {"parent":"\/tools\/python-data","base_url":"https:\/\/www.py4e.com","controller":"","extra":"","action":false,"parameters":[],"current":"\/tools\/python-data","full":"\/tools\/python-data"},
+spinnerUrl: "https://static.tsugi.org/img/spinner.gif",
+staticroot: "https://static.tsugi.org",
+apphome: "https://www.py4e.com",
+wwwroot: "https://www.py4e.com/tsugi",
+websocket_url: false,
+websocket_token: false,
+react_token: "974a2341ae31ca044c133da4331599d1",
+window_close_message: "Application complete",
+session_expire_message: "Your session has expired"
+
+}
+</script>
+        <!-- Tiny bit of JS -->
+        <script src="./PY4E - Python for Everybody_files/tsugiscripts_head.js.download"></script>
+        <!-- Le styles -->
+        <link href="./PY4E - Python for Everybody_files/bootstrap.min.css" rel="stylesheet">
+        <link href="./PY4E - Python for Everybody_files/jquery-ui.min.css" rel="stylesheet">
+                <link href="./PY4E - Python for Everybody_files/all.css" rel="stylesheet">
+        <link href="./PY4E - Python for Everybody_files/v4-shims.css" rel="stylesheet">
+        <style>:root {--primary:#0D47A1;
+--primary-menu:#0D47A1;
+--primary-border:#0d4295;
+--primary-darker:#0c4091;
+--primary-darkest:#0b3b85;
+--background-color:#FFFFFF;
+--secondary:#EEEEEE;
+--secondary-menu:#EEEEEE;
+--text:#111111;
+--text-light:#5E5E5E;
+--font-family:sans-serif;
+--font-size:14px;
+}</style>
+          <link href="./PY4E - Python for Everybody_files/tsugi2.css" rel="stylesheet">
+
+          <style>
+                        </style>
+<style>
+a[target="_blank"]:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    content: " \f35d";
+}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+body {
+    top: 0px !important;
+    }
+</style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/html5shiv/html5shiv.js"></script>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/respond/respond.min.js"></script>
+        <![endif]-->
+
+    <script type="text/javascript">CSRF_TOKEN = "620d0d2b17830";</script>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./PY4E - Python for Everybody_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./PY4E - Python for Everybody_files/m=el_main"></script></head>
+<body prefix="oer: http://oerschema.org" style="padding-top: 5.93rem; position: relative; min-height: 100%; top: 0px;" data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1050.0"><grammarly-extension data-grammarly-shadow-root="true" style="position: absolute; top: 0px; left: 0px; pointer-events: none;" class="cGcvT"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style="mix-blend-mode: darken; position: absolute; top: 0px; left: 0px; pointer-events: none;" class="cGcvT"></grammarly-extension>
+<div id="body_container" class="container">
+<script>
+if (window!=window.top) {
+    document.getElementById("body_container").className = "container-fluid";
+} else {
+    document.getElementById("body_container").className = "container";
+}
+</script>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="tsugi_main_nav_bar" style="display: block;">  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:window_close();">Done</a>
+    </div>
+    <div class="navbar-collapse collapse">
+    </div> <!--/.nav-collapse -->
+  </div> <!--container -->
+</nav>
+<script>
+if ( ! inIframe() ) {
+  document.getElementById('tsugi_main_nav_bar').style.display = 'block';
+  document.getElementsByTagName('body')[0].style.paddingTop = '5.93rem';
+} else {
+  document.getElementsByTagName('body')[0].style.paddingTop = '1.0rem';
+}
+</script>
+<!-- Modal -->
+<div id="tsugi_settings_dialog" class="modal fade" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="fa fa-close" aria-hidden="true"></span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Scraping HTML Data with BeautifulSoup Settings</h4>
+      </div>
+      <div class="modal-body">
+                  <img id="tsugi_settings_spinner" src="./PY4E - Python for Everybody_files/spinner.gif" style="display: none">
+            <span id="tsugi_settings_save_fail" class="text-danger" style="display:none;">Unable to save settings</span>
+            <p>Exercise is set to Sum comment data from HTML</p><p>There is currently no due date/time for this assignment.</p>
+              </div>
+    </div>
+
+  </div>
+</div>
+<p>Welcome Mohankumar Markuli Chandrayigowda from Using Python to Access Web Data</p>
+<div id="flashmessages"></div><p>
+<!--
+
+If you are having problems with this assignment, give this code to the
+instructor:  1315725
+
+-->
+<b>Scraping Numbers from HTML using BeautifulSoup</b>
+In this assignment you will write a Python program similar to
+<a href="https://www.py4e.com/code3/urllink2.py?PHPSESSID=974a2341ae31ca044c133da4331599d1" target="_blank">http://www.py4e.com/code3/urllink2.py</a>.
+The program will use <b>urllib</b> to read the HTML from the data files below, and parse the data,
+extracting numbers and compute the sum of the numbers in the file.
+</p>
+<p>
+We provide two files for this assignment.  One is a sample file where we give you the sum for your
+testing and the other is the actual data you need to process for the assignment.
+</p><ul>
+<li> Sample data: <a href="http://py4e-data.dr-chuck.net/comments_42.html" target="_blank">http://py4e-data.dr-chuck.net/comments_42.html</a>
+(Sum=2553) </li>
+<li> Actual data: <a href="http://py4e-data.dr-chuck.net/comments_1315725.html" target="_blank">http://py4e-data.dr-chuck.net/comments_1315725.html</a>
+(Sum ends with 70)<br> </li>
+</ul>
+You do not need to save these files to your folder since your
+program will read the data directly from the URL.
+<b>Note:</b> Each student will have a distinct data url for the assignment - so only use your
+own data url for analysis.
+<p></p>
+<b>Data Format</b>
+<p>
+The file is a table of names and comment counts.   You can ignore most of the data in the
+file except for lines like the following:
+</p><pre>&lt;tr&gt;&lt;td&gt;Modu&lt;/td&gt;&lt;td&gt;&lt;span class="comments"&gt;90&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Kenzie&lt;/td&gt;&lt;td&gt;&lt;span class="comments"&gt;88&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Hubert&lt;/td&gt;&lt;td&gt;&lt;span class="comments"&gt;87&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+</pre>
+You are to find all the &lt;span&gt; tags in the file and pull out the numbers from the
+tag and sum the numbers.
+<p>
+Look at the
+<a href="https://www.py4e.com/code3/urllink2.py?PHPSESSID=974a2341ae31ca044c133da4331599d1" target="_blank">sample code</a>
+provided.  It shows how to find all of a certain kind of tag, loop through the tags and
+extract the various aspects of the tags.
+</p><pre>...
+# Retrieve all of the anchor tags
+tags = soup('a')
+for tag in tags:
+   # Look at the parts of a tag
+   print 'TAG:',tag
+   print 'URL:',tag.get('href', None)
+   print 'Contents:',tag.contents[0]
+   print 'Attrs:',tag.attrs
+</pre>
+You need to adjust this code to look for <b>span</b> tags and pull out
+the text content of the span tag, convert them to integers and
+add them up to complete the assignment.
+<p></p>
+<p><b>Sample Execution</b>
+</p><p>
+</p><pre>$ python3 solution.py
+Enter - http://py4e-data.dr-chuck.net/comments_42.html
+Count 50
+Sum 2...
+</pre>
+<p></p>
+
+<p><b>Turning in the Assignment</b>
+</p><form method="post"><input type="hidden" name="PHPSESSID" value="974a2341ae31ca044c133da4331599d1">
+Enter the sum from the actual data and your Python code below:<br>
+Sum: <input type="text" size="20" name="sum">
+(ends with 70)
+<input type="submit" value="Submit Assignment"><br>
+Python code:<br>
+<textarea rows="20" style="width: 90%" name="code" spellcheck="false"></textarea><br>
+</form>
+<script src="./PY4E - Python for Everybody_files/jquery-1.11.3.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/bootstrap.min.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/jquery-ui.min.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/jquery.timeago-1.6.3.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/handlebars-v4.0.2.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/tmpl.min.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/tsugiscripts.js.download"></script>
+<script type="text/javascript">
+    HEARTBEAT_TIMEOUT = setTimeout(doHeartBeat, _TSUGI.heartbeat);
+    tsugiEmbedMenu();
+    $(document).ready(function() { jQuery("time.timeago").timeago(); });
+</script>
+<div id="google_translate_element" style="position: fixed; right: 1em; bottom: 0.25em;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="./PY4E - Python for Everybody_files/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="goog-te-menu-value" href="javascript:void(0)"><span>Select Language</span><img src="./PY4E - Python for Everybody_files/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="./PY4E - Python for Everybody_files/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, "google_translate_element");
+}
+</script><script type="text/javascript" src="./PY4E - Python for Everybody_files/element.js.download"></script>
+<script>
+$('a').each(function (x) {
+    var href = $(this).attr('href');
+    if ( ! href ) return;
+    if ( ! href.startsWith('#') ) return;
+    var pos = href.indexOf('/?');
+    if ( pos < 1 ) return;
+    // console.dir('Patching broken # href='+href);
+    href = href.substring(0,pos);
+    $(this).attr('href', href);
+});
+$('a').each(function (x) {
+    var href = $(this).attr('href');
+    var sess_name = 'PHPSESSID';
+    var sess_id = '974a2341ae31ca044c133da4331599d1';
+    if ( ! href ) return;
+    if ( href.startsWith('#') ) return;
+    if ( href.indexOf(sess_name) > 0 ) return;
+    if ( href.startsWith('javascript:') ) return;
+
+    var localurl = true;
+    if ( href.startsWith('http://') ) localurl = false;
+    if ( href.startsWith('https://') ) localurl = false;
+    if ( href.startsWith('//') ) localurl = false;
+
+    if ( href.startsWith(_TSUGI.wwwroot) ) localurl = true;
+    if ( _TSUGI.apphome && href.startsWith(_TSUGI.apphome) ) localurl = true;
+
+    // console.log(href,localurl);
+ 
+    if ( ! localurl ) return;
+    if ( href.indexOf('?') > 0 ) {
+        href = href + '&';
+    } else {
+        href = href + '?';
+    }
+    href = href + sess_name + '=' + sess_id;
+    // console.dir('Patching missing session href='+href);
+    $(this).attr('href', href);
+});
+
+</script>
+
+</div><script src="./PY4E - Python for Everybody_files/webcomponents-lite.js.download"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./PY4E - Python for Everybody_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 1045px; height: 267px; display: none;" src="./PY4E - Python for Everybody_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><grammarly-mirror data-grammarly-shadow-root="true" class="cGcvT"></grammarly-mirror></html>
